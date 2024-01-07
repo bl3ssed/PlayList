@@ -3,28 +3,27 @@
     padding: 0;
 }
 body {
-    background: gold;
+    background: #00FFFF;
     font-family: 'Caladea',sans-serif;
     font-size: 125%;
     top: 0px;
-    
 }
 footer {
-    background: black;
+    background: #7FFFD4;
     font-family: 'Gabriola',sans-serif;
     font-size: 155%;
-    color:green;
-    border-style:groove;
-    border-color:aqua;
-    border-width:3px;
-    bottom:0px;
-    right:0px;
-    left:0px;
+    color: green;
+    border-style: groove;
+    border-color: aqua;
+    border-width: 3px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
 }
 header {
-    background: black;
+    background: #7FFFD4;
     font-family: 'Gabriola',sans-serif;
-    font-size: 155%;
+    font-size: 110%;
     color: green;
     border-style: groove;
     border-color: aqua;

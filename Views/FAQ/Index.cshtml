@@ -1,0 +1,62 @@
+﻿@model FAQ
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "feed";
+}
+
+<h1>
+    О сайте
+</h1>
+<p style="font-family:'Franklin Gothic'">
+
+    Добро пожаловать на удивительный и разнообразный музыкальный портал, где вас ждет бесконечное изобилие музыкальных плейлистов, увлекательных карточек музыкантов, а также множество другого увлекательного контента. Наш сайт является настоящим музыкальным эверестом, где каждый любитель музыки найдет что-то по своему вкусу.
+
+    Под покровом нашего невероятного музыкального союза вы обнаружите множество кураторских плейлистов, созданных с любовью к музыке и умением создавать атмосферу. Будь вы поклонником динамичных ритмов, меланхоличных мелодий или экспериментальных звуков, у нас есть плейлист для каждого настроения, момента и жизненной ситуации.
+
+    Но это ещё не всё! Карточки музыкантов являются еще одной интересной особенностью нашего портала. Здесь вы найдете не только информацию о творческом пути каждого исполнителя, но и эксклюзивные материалы, интервью, фотографии и доступ к их новейшим композициям.
+
+    И, конечно, у нас есть богатый контент, который расширяет ваше представление о музыкальной культуре. Статьи о трендах в музыке, истории жанров, интервью с влиятельными музыкантами, обзоры на новые альбомы - все это и многое другое ждет вас на нашем портале.
+
+    Приходите и окунитесь в мир музыки, где каждая нота и каждый аккорд наполнены страстью к мелодии и ритму. В нашем музыкальном мире есть место для каждого, кто ищет вдохновение и радость в звуках.
+</p>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/kizaru.jpg" style="width:50%,height="500" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/yanix.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+    </button>
+</div>
+<h3>
+    Если у вас еще остались вопросы, то задать их можно в форме ниже:
+</h3>
+<form method="post" asp-controller="FAQ" asp-action="Check">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" style="width:100%" />
+    <span asp-validation-for="Name"></span>
+
+    <label asp-for="Age"></label>
+    <input asp-for="Age" style="width:100%"/>
+    <span asp-validation-for="Age" \n></span>
+
+    <label asp-for="Reply"></label>
+    <input asp-for="Reply" style="width:100%" />
+    <span asp-validation-for="Reply"></span>
+
+    <input type="submit" value="Send"></input>
+</form>

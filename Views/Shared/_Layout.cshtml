@@ -46,17 +46,15 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)*@
     <header>
-        <span class="logo">PlayList</span>
         <nav>
-            <a href="/">main</a>
-            <a href="/info">faq</a>
+            <a href="/" style="background-color:aqua;border-width:5px ;color: green;font-size:150%;font-family:Arial" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">PlayList</a> <a href="/faq" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">FAQ</a>
         </nav>
     </header>
     <main>
         @RenderBody()
     </main>
     <footer>
-        All rights not reserved;
+        All rights not reserved$
     </footer>
 </body>
 </html>
