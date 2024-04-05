@@ -9,54 +9,71 @@
     <link rel="stylesheet" href="~/PlayList.styles.css" asp-append-version="true" />
 </head>
 <body>
-    @*<header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PlayList</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <header>
+        @* <nav class="logo">
+            <a href="/" style="padding-right:132px;">members</a>
+            <a href="/info" style="padding-right:142px;">cars</a>
+            <img src="clika.png" alt="hola"/>
+            <a href="/" style="padding-right:132px;padding-left:142px;">news</a>
+            <a href="/info">brand products</a>/
+        </nav> *@
+        <section>
+            <div class="header_container">
+                <div class="share">
+                    <div class="first_col_h">
+                        @*240 18.75%*@
+                        <a href="/" class="header_link">members</a>
+                    </div>
+                    <div class="second_col_h">
+                        @*200 15.625%*@
+                        <a href="/" class="header_link">cars</a>
+                    </div>
+                    <div class="thirst_col_h">
+                        @*400 31.25%*@
+                        <img src="clika.png" alt="hola" />
+                    </div>
+                    <div class="fourth_col_h">
+                        @*200 15.625*@
+                        <a href="/" class="header_link1">news</a>
+                    </div>
+                    <div class="fifth_col_h">
+                        @*240 18.75%*@
+                        <a href="/" class="header_link1">brand products</a>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - PlayList - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)*@
-    <header>
-        <span class="logo">PlayList</span>
-        <nav>
-            <a href="/">main</a>
-            <a href="/info">faq</a>
-        </nav>
+        </section>
     </header>
     <main>
         @RenderBody()
+        
+
     </main>
     <footer>
-        All rights not reserved;
+        <section>
+            <div class="footer_container">
+                <div class="share">
+                    <div class="first_col">
+                        <a href="/" class="link">О тусовке</a>
+                        <div><a href="/" class="link_bot">Locations</a></div>
+                        <a href="/" class="link_bot">Ideas</a>
+                        <a href="/" class="link_bot">Rules</a>
+                    </div>
+                    <div class="second_col">
+                        <a href="/" class="link">Связь</a>
+                        <a href="/" class="link_bot">Blessed_clique</a>
+                        <a href="/" class="link_bot">Blessed_clique</a>
+                        <a href="/" class="link_bot">Blessed_clique</a>
+                    </div>
+                    <div class="thirst_col">
+                        <a href="/" class="link">Всякое</a>
+                        <a href="/" class="link_bot">Rachat</a>
+                    </div>
+                    <div class="fourth_col">
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 </html>
