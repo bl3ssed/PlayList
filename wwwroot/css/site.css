@@ -52,10 +52,13 @@ a:hover {
     margin: auto;
     max-width: 1280px;
     display: flex;
+    margin-bottom: 1.2rem;
 }
 .card_project {
     max-height: 440px;
     max-width: 280px;
+    width:20rem;
+    height:30rem;
     border-radius: 5px;
     border-color: rgba(255, 255, 0, 0.33);
     border-width: 1px;
@@ -69,6 +72,7 @@ a:hover {
     border-style: solid;
 }
 .description {
+    margin-top:1.5rem;
     text-decoration: none;
     color: white;
     font-family: Agathiqy;
@@ -90,9 +94,13 @@ body {
     font-family: 'The Voice Font(RUS BY LYAJKA)';
     font-size: 16px;
     color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .text_card {
+    margin-left:10px;
+    margin-right:10px;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 14px;
@@ -103,15 +111,19 @@ body {
 }
 
 .main_col1 {
-    flex-basis: 28.125%;
+    flex-basis: 21.875%;
+    margin-right:5rem;
+    
 }
 
 .main_col2 {
-    flex-basis: 28.125%;
+    flex-basis: 21.875%;
+    margin-right: 5rem;
 }
 
 .main_col3 {
-    flex-basis: 28.125%;
+    flex-basis: 21.875%;
+    margin-right: 5rem;
 }
 
 .main_col4 {
@@ -121,15 +133,18 @@ body {
 }
 
 .main_col1_mem {
-    flex-basis: 28.125%;
+    flex-basis: 21.875%;
+    margin-right: 5rem;
 }
 
 .main_col2_mem {
-    flex-basis: 28.125%;
+    flex-basis: 21.875%;
+    margin-right: 5rem;
 }
 
 .main_col3_mem {
-    flex-basis: 28.125%;
+    flex-basis: 21.875%;
+    margin-right: 5rem;
 }
 
 .main_col4_mem {
@@ -144,6 +159,7 @@ body {
     border-color: rgba(255, 255, 0, 0.33);
     border-width: 1px;
     border-style: solid;
+    
 }
 .nik_space{
     max-height:40px;
@@ -156,11 +172,36 @@ body {
     margin:auto;
     
 }
+.regalii {
+    padding-left:10px;
+    max-height: 23px;
+    display: flex;
+    margin: auto;
+    font-size:20px;
+    font-family: 'The Voice Font(RUS BY LYAJKA)';
+    -webkit-text-stroke: 0.5px yellow; /* Ширина и цвет рамки */
+}
+.text_mem {
+    padding-top: 10px;
+    padding-bottom:5px;
+    max-height: 150px;
+    max-width: 255px;
+    display: flex;
+    margin: auto;
+    font-size: 14px;
+    font-family: Gabriola;
+    color: white;
+    line-height: 1.2; /* Устанавливаем высоту строки в 1 */
+}
 .circle {
     width: 120px;
     height: 120px;
     border-radius: 50%; /* Устанавливаем радиус скругления для создания круглой формы */ /* Цвет фона (замените на ваш желаемый цвет) */
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
 .circle_photo{
     max-width:120px;
     max-height:120px;
@@ -205,6 +246,7 @@ footer {
     bottom:0px;
     right:0px;
     left:0px;
+    vertical-align:bottom;
 }
 .footer_container{
     margin:auto;
