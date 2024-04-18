@@ -7,20 +7,28 @@
     padding: 0;
 }
 a {
-    color: white; /* ��������� ����� ������ �� ����� */
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-family: Agathiqy;
+    display: flex;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
+
+    a:hover {
+        box-shadow: 1px 1px #313131, 2px 2px #313131, 3px 3px #313131;
+        transform: translateX(-3px) translateY(-3px);
+    }
 
 a:visited {
     color: white; /* ���� ���������� ������ */
 }
-.link {
-    text-decoration: none;
-    color: white;
-}
-a:hover {
-    color: red; /* ���� ������ ��� ��������� */
-    text-decoration: underline; /* ��������� ������������� */
-}
+
+
+
 .img_social {
     max-width: 36px;
     max-height: 36px;
@@ -110,80 +118,133 @@ body {
     text-align: left;
 }
 
-.main_col1 {
-    flex-basis: 21.875%;
-    margin-right:5rem;
-    
+/* DEMO-SPECIFIC STYLES */
+.typewriter_text_card {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0px;
+    text-align: left;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /*border-right: .15em solid orange;*/ /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    /*letter-spacing: .15em;*/ /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
 }
 
-.main_col2 {
-    flex-basis: 21.875%;
-    margin-right: 5rem;
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
-.main_col3 {
-    flex-basis: 21.875%;
-    margin-right: 5rem;
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+    .main_col1 {
+        flex-basis: 21.875%;
+        margin-right: 5rem;
+    }
+
+    .main_col2 {
+        flex-basis: 21.875%;
+        margin-right: 5rem;
+    }
+
+    .main_col3 {
+        flex-basis: 21.875%;
+        margin-right: 5rem;
+    }
+
+    .main_col4 {
+        flex-basis: 15.625%;
+        display: flex;
+        vertical-align: central;
+    }
+
+    .main_col1_mem {
+        flex-basis: 21.875%;
+        margin-right: 5rem;
+    }
+
+    .main_col2_mem {
+        flex-basis: 21.875%;
+        margin-right: 5rem;
+    }
+
+    .main_col3_mem {
+        flex-basis: 21.875%;
+        margin-right: 5rem;
+    }
+
+    .main_col4_mem {
+        flex-basis: 15.625%;
+        display: flex;
+        vertical-align: central;
+    }
+
+    .mem_card {
+        max-height: 360px;
+        max-width: 280px;
+        border-radius: 5px;
+        border-color: rgba(255, 255, 0, 0.33);
+        border-width: 1px;
+        border-style: solid;
+    }
+
+
+
+.fade_in {
+    /*position: relative;*/
+    animation: myfirst 2s;
+    animation: fadein 3s;
+    -webkit-animation: myfirst 2s ease-out forwards;
 }
 
-.main_col4 {
-    flex-basis: 15.625%;
-    display: flex;
-    vertical-align: central;
+@keyframes myfirst {
+    from {
+        left: -200px;
+        opacity: 0;
+    }
+
+    to {
+        left: 100px;
+        opacity: 1;
+    }
 }
 
-.main_col1_mem {
-    flex-basis: 21.875%;
-    margin-right: 5rem;
+@-webkit-keyframes myfirst {
+    from {
+        right: -200px;
+        opacity: 0;
+    }
+
+    to {
+        right: 100px;
+        opacity: 1;
+    }
 }
 
-.main_col2_mem {
-    flex-basis: 21.875%;
-    margin-right: 5rem;
-}
 
-.main_col3_mem {
-    flex-basis: 21.875%;
-    margin-right: 5rem;
-}
-
-.main_col4_mem {
-    flex-basis: 15.625%;
-    display: flex;
-    vertical-align: central;
-}
-.mem_card {
-    max-height: 360px;
-    max-width: 280px;
-    border-radius: 5px;
-    border-color: rgba(255, 255, 0, 0.33);
-    border-width: 1px;
-    border-style: solid;
-    
-}
-.nik_space{
-    max-height:40px;
-    display:flex;
-    margin-bottom:5px;
-}
-.photo_space {
-    max-height: 120px;
-    display: flex;
-    margin:auto;
-    
-}
-.regalii {
-    padding-left:10px;
-    max-height: 23px;
-    display: flex;
-    margin: auto;
-    font-size:20px;
-    font-family: 'The Voice Font(RUS BY LYAJKA)';
-    -webkit-text-stroke: 0.5px yellow; /* Ширина и цвет рамки */
-}
-.text_mem {
+.typewriter_text_mem {
     padding-top: 10px;
-    padding-bottom:5px;
+    padding-bottom: 5px;
     max-height: 150px;
     max-width: 255px;
     display: flex;
@@ -192,169 +253,242 @@ body {
     font-family: Gabriola;
     color: white;
     line-height: 1.2; /* Устанавливаем высоту строки в 1 */
-}
-.circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Устанавливаем радиус скругления для создания круглой формы */ /* Цвет фона (замените на ваш желаемый цвет) */
-    overflow: hidden;
-    margin-left: 10px;
-    margin-right: 10px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /*border-right: .15em solid orange;*/ /* The typwriter cursor */
+    /*letter-spacing: .15em;*/ /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
 }
 
-.circle_photo{
-    max-width:120px;
-    max-height:120px;
-    margin-left:10px;
-    margin-right:10px;
-}
-.nickname {
-    font-family: 'Shadow Sprayz';
-    color: white;
-    font-size: 28px;
-    text-shadow: 3px -3px 0px rgba(0, 0, 0, 1);
-    margin: auto;
-}
-.mem_attr_r {
-    max-height: 30px;
-    max-width: 30px;
-    float:right;
-    margin-top:5px;
-    margin-right:10px;
-}
-.mem_attr_l {
-    max-height: 30px;
-    max-width: 30px;
-    float: left;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-/*main*/
-/*footer*/
-.link_bot {
-    width: fit-content;
-    text-decoration: none;
-    color: white;
-    font-family: Agathiqy;
-    display: flex;
-}
-footer {
-    background: black;
-    font-family: 'The Voice Font(RUS BY LYAJKA)';
-    font-size: 24px;
-    color:white;
-    bottom:0px;
-    right:0px;
-    left:0px;
-    vertical-align:bottom;
-}
-.footer_container{
-    margin:auto;
-    max-width:1280px;
-    padding:10px;
-}
-.share{
-    display:flex;
-    /*background-color:red;*/
-}
-.first_col {
-    /*background-color: green;*/
-    flex-basis:25%;
-}
-.second_col {
-    /*background-color: blue;*/
-    flex-basis: 25%;
-}
-.thirst_col {
-   /* background-color: purple;*/
-    flex-basis: 25%;
-}
-.fourth_col {
-   /* background-color: pink;*/
-    flex-basis: 25%;
-}
-/*footer*/
+
+    .nik_space {
+        max-height: 40px;
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .photo_space {
+        max-height: 120px;
+        display: flex;
+        margin: auto;
+    }
+
+    .regalii {
+        padding-left: 10px;
+        max-height: 23px;
+        display: flex;
+        margin: auto;
+        font-size: 20px;
+        font-family: 'The Voice Font(RUS BY LYAJKA)';
+        -webkit-text-stroke: 0.5px yellow; /* Ширина и цвет рамки */
+    }
+
+    .text_mem {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        max-height: 150px;
+        max-width: 255px;
+        display: flex;
+        margin: auto;
+        font-size: 14px;
+        font-family: Gabriola;
+        color: white;
+        line-height: 1.2; /* Устанавливаем высоту строки в 1 */
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; /* Устанавливаем радиус скругления для создания круглой формы */ /* Цвет фона (замените на ваш желаемый цвет) */
+        overflow: hidden;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .circle_photo {
+        max-width: 120px;
+        max-height: 120px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .nickname {
+        font-family: 'Shadow Sprayz';
+        color: white;
+        font-size: 28px;
+        text-shadow: 3px -3px 0px rgba(0, 0, 0, 1);
+        margin: auto;
+    }
+
+    .mem_attr_r {
+        max-height: 30px;
+        max-width: 30px;
+        float: right;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    .mem_attr_l {
+        max-height: 30px;
+        max-width: 30px;
+        float: left;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    /*main*/
+    /*footer*/
+    .link_bot {
+        width: fit-content;
+        text-decoration: none;
+        color: white;
+        font-family: Agathiqy;
+        display: flex;
+        border-radius: 4px;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link_bot:hover {
+        box-shadow: 1px 1px #313131, 2px 2px #313131, 3px 3px #313131;
+        transform: translateX(-5px);
+    }
 
 
 
-/*header*/
-header {
-    background: black;
-    max-height: 80px;
-    font-family: 'Shadow Sprayz';
-    font-size: 24px;
-}
-.header_container {
-    margin: auto;
-    max-width: 1280px;
-    max-height: 80px;
-}
+    .link {
+        font-family: 'The Voice Font(RUS BY LYAJKA)';
+        text-decoration: none;
+        color: white;
+    }
 
-.header_link {
-    height: 100%;
-    text-decoration: none;
-    color: white;
-    font-family: Agathiqy;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-family: 'Shadow Sprayz';
-    font-size: 24px;
-    background-color: #2AA5A0;
-    background-image: linear-gradient(-180deg, #FF0000, #FFC100);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.header_link1 {
-    height: 100%;
-    text-decoration: none;
-    color: white;
-    font-family: Agathiqy;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    font-family: 'Shadow Sprayz';
-    font-size: 24px;
-    background-color: #2AA5A0;
-    background-image: linear-gradient(-180deg, #FF0000, #FFC100);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.first_col_h {
-/*    background-color: blue;*/
-    flex-basis: 18.75%;
-    align-items: center;
-}
-.second_col_h {
-    /*background-color: red;*/
-    flex-basis: 15.625%;
-    align-items: center;
-}
-.thirst_col_h {
-    /*background-color: green;*/
-    flex-basis: 31.25%;
-}
-.fourth_col_h {
-    /*background-color: pink;*/
-    flex-basis: 15.625%;
-    justify-content: center;
-}
-.fifth_col_h {
-    /*background-color: purple;*/
-    flex-basis: 18.75%;
-    justify-content: center;
-}
-.column-container {
-    width: 1278px; /* ������ ���������� */
-    height: 240px; /* ������ ���������� */
-    display: flex;
-    margin: 0 auto; /* ������������ �� ������ */
-}
+    footer {
+        background: black;
+        font-family: 'The Voice Font(RUS BY LYAJKA)';
+        font-size: 24px;
+        color: white;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        vertical-align: bottom;
+    }
 
-.column {
-    width: 320px; /* ������ ������� ������� */
-    height: 100%; /* ������ ������� ������� */
-    box-sizing: border-box;
-    display: block;
-}
-/*header*/
+    .footer_container {
+        margin: auto;
+        max-width: 1280px;
+        padding: 10px;
+    }
+
+    .share {
+        display: flex;
+        /*background-color:red;*/
+    }
+
+    .first_col {
+        /*background-color: green;*/
+        flex-basis: 25%;
+    }
+
+    .second_col {
+        /*background-color: blue;*/
+        flex-basis: 25%;
+    }
+
+    .thirst_col {
+        /* background-color: purple;*/
+        flex-basis: 25%;
+    }
+
+    .fourth_col {
+        /* background-color: pink;*/
+        flex-basis: 25%;
+    }
+    /*footer*/
+    /*header*/
+    header {
+        background: black;
+        max-height: 80px;
+        font-family: 'Shadow Sprayz';
+        font-size: 24px;
+    }
+
+    .header_container {
+        margin: auto;
+        max-width: 1280px;
+        max-height: 80px;
+    }
+
+    .header_link {
+        height: 100%;
+        text-decoration: none;
+        color: white;
+        font-family: Agathiqy;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-family: 'Shadow Sprayz';
+        font-size: 24px;
+        background-color: #2AA5A0;
+        background-image: linear-gradient(-180deg, #FF0000, #FFC100);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .header_link1 {
+        height: 100%;
+        text-decoration: none;
+        color: white;
+        font-family: Agathiqy;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        font-family: 'Shadow Sprayz';
+        font-size: 24px;
+        background-color: #2AA5A0;
+        background-image: linear-gradient(-180deg, #FF0000, #FFC100);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .first_col_h {
+        /*    background-color: blue;*/
+        flex-basis: 18.75%;
+        align-items: center;
+    }
+
+    .second_col_h {
+        /*background-color: red;*/
+        flex-basis: 15.625%;
+        align-items: center;
+    }
+
+    .thirst_col_h {
+        /*background-color: green;*/
+        flex-basis: 31.25%;
+    }
+
+    .fourth_col_h {
+        /*background-color: pink;*/
+        flex-basis: 15.625%;
+        justify-content: center;
+    }
+
+    .fifth_col_h {
+        /*background-color: purple;*/
+        flex-basis: 18.75%;
+        justify-content: center;
+    }
+
+    .column-container {
+        width: 1278px; /* ������ ���������� */
+        height: 240px; /* ������ ���������� */
+        display: flex;
+        margin: 0 auto; /* ������������ �� ������ */
+    }
+
+    .column {
+        width: 320px; /* ������ ������� ������� */
+        height: 100%; /* ������ ������� ������� */
+        box-sizing: border-box;
+        display: block;
+    }
+    /*header*/
